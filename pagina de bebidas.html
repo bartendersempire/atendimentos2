@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Escolha os serviços</title>
+    <style>
+         body {
+            background-color: black;
+            font-family: 'Times New Roman', serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .enviar {
+            width: 7%;
+            height: 5vh;
+        }
+        .voltar {
+            position: absolute;
+            left: 0%; /* Posiciona o botão à esquerda */
+            top: 3%; /* Ajusta a distância do topo */
+            padding: 0.3% 0.6%;
+            background-color: #f1f1f1;
+            border: 0.8% solid #ccc;
+            cursor: pointer;
+        }
+        .imagem {
+            position: center;
+            width: 9%; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="site1 - Copia.html">
+        <button class="voltar">Voltar</button>
+    </a>
+
+    <div>
+        <h3>Escolha os serviços desejados:</h3>
+        <form>
+            <!-- Campo para o nome -->
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+            <div class="checkbox-container">
+               <label><input type="checkbox" value="Bartender para festas"> Bartender para festas <br><br>  <img src="bebida.png" class="imagem" alt="Imagem de bebida">     </label><br>
+             <br><br>
+                <label><input type="checkbox" value="Decoração de eventos"> Decoração de eventos</label><br>
+                <label><input type="checkbox" value="Drinks personalizados"> Drinks personalizados</label><br>
+                <label><input type="checkbox" value="Garçons para festas"> Garçons para festas</label><br>
+            </div>
+
+            <br><br>
+            <button type="button" class="enviar" onclick="enviarWhatsApp()">Enviar</button>
+        </form>
+    </div>
+    
+    <script>
+        function enviarWhatsApp() {
+            let nome = document.getElementById("nome").value.trim();
+            let telefone = "553387031225"; // Seu número do WhatsApp com DDD
+
+            // Captura os serviços selecionados
+            let servicosSelecionados = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(el => {
+                servicosSelecionados.push(el.value);
+            });
+
+            // Validações
+            if (nome.length === 0) {
+                alert("coloque o seu nome por favor.");
+                return;
+            }
+
+            if (servicosSelecionados.length === 0) {
+                alert("Selecione pelo menos um serviço.");
+                return;
+            }
+
+            // Monta a mensagem
+            let mensagem = `Olá, meu nome é ${nome}. Gostaria de contratar os seguintes serviços: ${servicosSelecionados.join(", ")}. Aguardo seu retorno!`;
+
+            // Gera o link do WhatsApp
+            let url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+
+            // Abre o WhatsApp
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
