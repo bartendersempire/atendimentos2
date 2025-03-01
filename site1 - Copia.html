@@ -17,15 +17,14 @@
             }
             button {
                 font-size: 1.2rem; 
-                  cursor: pointer;
-            background-color: rgb(255, 255, 255);
-            color: black;
-            border-radius: 1vh;
-            font-weight: bold;
-            margin: 2vh;
-                  margin-left: 10vh ;
-            padding: 1px 2px;
-                position: center;
+                cursor: pointer;
+                background-color: rgb(255, 255, 255);
+                color: black;
+                border-radius: 1vh;
+                font-weight: bold;
+                margin: 2vh;
+                padding: 10px 20px;
+                text-align: center; /* Garante que o texto do botão fique centralizado */
             }
         }
 
@@ -60,6 +59,7 @@
             font-weight: bold;
             margin: 2vh;
             padding: 10px 20px;
+            text-align: center; /* Centraliza o texto do botão */
         }
 
         button:hover {
@@ -68,11 +68,12 @@
 
         .rodape, .rodape2 {
             position: fixed;
-            bottom: 0vh;
-            width: 100%;
-            padding: 1vh 0;
+            bottom: 2vh; /* Espaço adicional para garantir que não fique no topo do botão */
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;  /* Ajuste a largura para se adequar ao conteúdo */
             text-align: center;
-            z-index: 10; /* Garante que o rodapé e os botões fiquem acima de outros elementos */
+            z-index: 10;
         }
 
         .rodape {
@@ -94,6 +95,7 @@
         .botao-instagram, .whatsapp a {
             display: inline-flex;
             align-items: center;
+            justify-content: center; /* Garante que o conteúdo do botão seja centralizado */
             text-decoration: none;
             background-color: white;
             color: black;
@@ -110,10 +112,10 @@
 
         .whatsapp {
             position: fixed;
-            bottom: 0;
+            bottom: 2vh;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 15; /* Garantir que o botão de WhatsApp não esteja atrás de outro elemento */
+            z-index: 15; /* Garantir que o botão de WhatsApp fique acima de outros elementos */
         }
 
         .dados {
@@ -146,8 +148,8 @@
 
         .festa {
             display: flex;
-            margin-left: 46.5%;
-            margin-top: -1%;
+            justify-content: center;  /* Centraliza o botão dentro do formulário */
+            margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
         }
 
         .bebida {
