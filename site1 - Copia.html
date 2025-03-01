@@ -15,6 +15,8 @@
             html {
                 font-size: 10px; 
             }
+
+            /* Altere o tamanho dos botões aqui para dispositivos móveis */
             button {
                 font-size: 1.2rem; 
                 cursor: pointer;
@@ -24,7 +26,13 @@
                 font-weight: bold;
                 margin: 2vh;
                 padding: 10px 20px;
-                text-align: center; /* Garante que o texto do botão fique centralizado */
+                text-align: center;
+            }
+
+            /* Altere o tamanho da caixa de texto aqui para dispositivos móveis */
+            .dados {
+                width: 80%; /* Aumente ou diminua conforme necessário */
+                height: 4vh;
             }
         }
 
@@ -51,6 +59,7 @@
             padding: 2vh;
         }
 
+        /* Botões principais (Menu de bebidas e festa) */
         button {
             cursor: pointer;
             background-color: rgb(255, 255, 255);
@@ -66,6 +75,7 @@
             opacity: 0.8;
         }
 
+        /* Rodapé */
         .rodape, .rodape2 {
             position: fixed;
             bottom: 2vh; /* Espaço adicional para garantir que não fique no topo do botão */
@@ -76,6 +86,8 @@
             z-index: 10;
         }
 
+        /* Aqui você pode ajustar a posição dos botões no rodapé */
+        /* Altere os valores de right ou left para ajustar a posição de cada botão */
         .rodape {
             right: 35%;
         }
@@ -92,6 +104,7 @@
             vertical-align: middle;
         }
 
+        /* Botão Instagram e WhatsApp */
         .botao-instagram, .whatsapp a {
             display: inline-flex;
             align-items: center;
@@ -104,12 +117,14 @@
             font-weight: bold;
             z-index: 20; /* Garantir que os botões fiquem acima de outros elementos */
             position: relative; /* Necessário para que o z-index funcione corretamente */
+            margin-top: 2vh; /* Adicionando um pequeno espaçamento superior */
         }
 
         .botao-instagram:hover, .whatsapp a:hover {
             opacity: 0.8;
         }
 
+        /* Posição do botão de WhatsApp */
         .whatsapp {
             position: fixed;
             bottom: 2vh;
@@ -118,8 +133,9 @@
             z-index: 15; /* Garantir que o botão de WhatsApp fique acima de outros elementos */
         }
 
+        /* Ajuste o tamanho da caixa de texto aqui para o computador */
         .dados {
-            width: 20%;
+            width: 20%;  /* Ajuste a largura conforme necessário */
             height: 3vh;
         }
 
@@ -146,6 +162,7 @@
             display: block;
         }
 
+        /* Ajuste a posição do botão de "festa" aqui */
         .festa {
             display: flex;
             justify-content: center;  /* Centraliza o botão dentro do formulário */
