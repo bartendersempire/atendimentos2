@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Encomende nossos serviços</title>
-    
-    <!-- Fonte do Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
-
-    <style>/* Ajuste a posição do botão Instagram no rodapé */
+<style>
+/* Ajuste a posição do botão Instagram no rodapé */
 @media (max-width: 1085px) {
     .rodape {
         position: absolute;
@@ -40,29 +29,30 @@
         padding: 1vh 2vh;
         font-size: 1rem; /* Fonte reduzida para mobile */
     }
+
     .festa {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
-        }
+        display: absolute;
+        justify-content: center;  /* Centraliza o botão dentro do formulário */
+        margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
+    }
 
-        .bebida2 {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 5vh; /* Dá um pequeno espaçamento entre os formulários */
-            
-        }
-        .cidade {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
-        }
+    .bebida2 {
+        display: absolute;
+        justify-content: center;  /* Centraliza o botão dentro do formulário */
+        margin-top: 5vh; /* Dá um pequeno espaçamento entre os formulários */
+    }
 
-   .dados {
-            width: 50%;  /* Ajuste a largura conforme necessário */
-            height: 3vh;
-        }
- 
+    .cidade {
+        display: absolute;
+        justify-content: center;  /* Centraliza o botão dentro do formulário */
+        margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+    }
+
+    /* Alteração para a caixa de entrada 'Sua Cidade' */
+    .dados {
+        width: 80%;  /* Ajuste a largura para ocupar 80% da tela em dispositivos móveis */
+        height: 3vh;
+    }
 }
 
 
@@ -70,220 +60,148 @@
 
 
 
-        
 
 
-        body {
-            background-color: black;
-            font-family: 'Times New Roman', serif;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
-        .fixar {
-            font-size: 7vh;
-            color: rgb(223, 186, 0);
-            font-family: "Updock", serif;
-        }
+body {
+    background-color: black;
+    font-family: 'Times New Roman', serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        .conteudo {
-            flex: 1;
-            padding: 2vh;
-        }
+.fixar {
+    font-size: 7vh;
+    color: rgb(223, 186, 0);
+    font-family: "Updock", serif;
+}
 
-        /* Botões principais (Menu de bebidas e festa) */
-        button {
-            cursor: pointer;
-            background-color: rgb(255, 255, 255);
-            color: black;
-            border-radius: 1vh;
-            font-weight: bold;
-            margin-left: 2vh;
-            padding: 10px 20px;
-            text-align: center; /* Centraliza o texto do botão */
-        }
+.conteudo {
+    flex: 1;
+    padding: 2vh;
+}
 
-        button:hover {
-            opacity: 0.8;
-        }
+/* Botões principais (Menu de bebidas e festa) */
+button {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 1vh;
+    font-weight: bold;
+    margin-left: 2vh;
+    padding: 10px 20px;
+    text-align: center; /* Centraliza o texto do botão */
+}
 
-        /* Rodapé */
-        .rodape, .rodape2 {
-            position: fixed;
-            bottom: 2vh; /* Espaço adicional para garantir que não fique no topo do botão */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1000px;  /* Ajuste a largura para se adequar ao conteúdo */
-            text-align: center;
-            z-index: 10;
-        }
+button:hover {
+    opacity: 0.8;
+}
 
-        /* Aqui você pode ajustar a posição dos botões no rodapé */
-        /* Altere os valores de right ou left para ajustar a posição de cada botão */
-        .rodape {
-            right: 5%;
-        }
+/* Rodapé */
+.rodape, .rodape2 {
+    position: fixed;
+    bottom: 2vh; /* Espaço adicional para garantir que não fique no topo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;  /* Ajuste a largura para se adequar ao conteúdo */
+    text-align: center;
+    z-index: 10;
+}
 
-        .rodape2 {
-            right: 0%;
-        }
+.rodape {
+    right: 5%;
+}
 
-        .instagram-img, .whatsapp img {
-            width: 4vh;
-            height: 4vh;
-            border-radius: 50%;
-            margin-right: 3vh;
-            vertical-align: middle;
-        }
+.rodape2 {
+    right: 0%;
+}
 
-        /* Botão Instagram e WhatsApp */
-        .botao-instagram, .whatsapp a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center; /* Garante que o conteúdo do botão seja centralizado */
-            text-decoration: none;
-            background-color: white;
-            color: black;
-            padding: 2vh 3vh;
-            border-radius: 1vh;
-            font-weight: bold;
-            z-index: 20; /* Garantir que os botões fiquem acima de outros elementos */
-            position: relative; /* Necessário para que o z-index funcione corretamente */
-            margin-top: 2vh; /* Adicionando um pequeno espaçamento superior */
-        }
+.instagram-img, .whatsapp img {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    margin-right: 3vh;
+    vertical-align: middle;
+}
 
-        .botao-instagram:hover, .whatsapp a:hover {
-            opacity: 0.8;
-        }
+/* Botão Instagram e WhatsApp */
+.botao-instagram, .whatsapp a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Garante que o conteúdo do botão seja centralizado */
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 2vh 3vh;
+    border-radius: 1vh;
+    font-weight: bold;
+    z-index: 20; /* Garantir que os botões fiquem acima de outros elementos */
+    position: relative; /* Necessário para que o z-index funcione corretamente */
+    margin-top: 2vh; /* Adicionando um pequeno espaçamento superior */
+}
 
-        /* Posição do botão de WhatsApp */
-        .whatsapp {
-            position: fixed;
-            bottom: 2vh;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 15; /* Garantir que o botão de WhatsApp fique acima de outros elementos */
-        }
+.botao-instagram:hover, .whatsapp a:hover {
+    opacity: 0.8;
+}
 
-        /* Ajuste o tamanho da caixa de texto aqui para o computador */
-        .dados {
-            width: 20%;  /* Ajuste a largura conforme necessário */
-            height: 3vh;
-        }
+/* Posição do botão de WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15; /* Garantir que o botão de WhatsApp fique acima de outros elementos */
+}
 
-        .enviar {
-            width: 7%;
-            height: 5vh;
-        }
+/* Ajuste o tamanho da caixa de texto aqui para o computador */
+.dados {
+    width: 20%;  /* Ajuste a largura conforme necessário */
+    height: 3vh;
+}
 
-        .bebidas {
-            position: absolute;
-            right: 38%;
-            top: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1vh 0;
-            text-align: center;
-        }
-        
-        .checkbox-container {
-            text-align: left;
-            display: inline-block;
-        }
+.enviar {
+    width: 7%;
+    height: 5vh;
+}
 
-        .checkbox-container label {
-            display: block;
-        }
+.bebidas {
+    position: absolute;
+    right: 38%;
+    top: 65%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1vh 0;
+    text-align: center;
+}
 
-        /* Ajuste a posição do botão de "festa" aqui */
-        .festa {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
-        }
+.checkbox-container {
+    text-align: left;
+    display: inline-block;
+}
 
-        .bebida2 {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
-        }
-        .bebida {
-            display: absolute;
-            justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
-        }
-    </style>
-</head>
+.checkbox-container label {
+    display: block;
+}
 
-<body>
+.festa {
+    display: absolute;
+    justify-content: center;  /* Centraliza o botão dentro do formulário */
+    margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
+}
 
-    <h1><b><i class="fixar">Bartender's Empire</i></b></h1>
+.bebida2 {
+    display: absolute;
+    justify-content: center;  /* Centraliza o botão dentro do formulário */
+    margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+}
 
-    <div class="conteudo">
-        <h2>Sobre nosso trabalho:</h2>
-        <p>
-            Nossa equipe trabalha como: bartender, ornamentações de festas. Oferecemos o melhor atendimento para que
-            todos aproveitem ao máximo a festa, com uma decoração bem feita e drinks lindos e deliciosos! Trabalhamos
-            em Virginópolis e região.
-        </p>
-
-        <p> Adicione alguns dados para entrarmos em contato.</p>
-
-        <!-- Formulário para enviar os dados -->
-        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="cidade">
-            <input class="dados" type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
-        </form> 
-        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
-            <button type="submit">Menu de bebidas</button>
-        </form>
-        
-        <form id="pedidoForm" onsubmit="event.preventDefault(); festa();" class="festa">
-            <button type="submit">festa</button>
-        </form>
-    </div>
-
-    <div class="rodape">
-        <p>Caso queira entrar em contato conosco, basta acessar o link abaixo:</p>
-        <a href="https://www.instagram.com/bartenders_empire/?hl=pt-br" class="botao-instagram">
-            <img src="unnamed.png" alt="Instagram" class="instagram-img"> Nosso Instagram
-        </a>
-    </div>
-    
-    <div class="whatsapp">
-        <a href="https://api.whatsapp.com/send/?phone=553387031225&text=Ol%C3%A1%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas,%20voc%C3%AA%20est%C3%A1%20dispon%C3%ADvel?&type=phone_number&app_absent=0" class="botao-instagram">
-            <img src="whatsapp.png" alt="WhatsApp"  class="instagram-img"> Nosso WhatsApp
-        </a>
-    </div>
-
-    <script>
-        function enviar() {
-            let cidade = document.getElementById("cidade").value.trim(); 
-
-            if (cidade.length === 0) {
-                alert("coloque o sua cidade por favor, para sabermos onde realizaremos a festa.");
-                return;
-            }
-
-            // Abre a próxima página
-            window.location.href = "pagina de bebidas.html";
-        }
-
-        function festa() {
-            let cidade = document.getElementById("cidade").value.trim(); 
-
-            if (cidade.length === 0) {
-                alert("coloque o sua cidade por favor, para sabermos onde realizaremos a festa.");
-                return;
-            }
-
-            // Abre a próxima página
-            window.location.href = "pagina de festas.html";
-        }
-    </script>
-
-</body>
-</html>
+.bebida {
+    display: absolute;
+    justify-content: center;  /* Centraliza o botão dentro do formulário */
+    margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+}
+</style>
