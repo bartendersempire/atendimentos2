@@ -40,19 +40,21 @@
         padding: 1vh 2vh;
         font-size: 1rem; /* Fonte reduzida para mobile */
     }
-            .festa {
-            display: flex;
+    .festa {
+            display: absolute;
             justify-content: center;  /* Centraliza o botão dentro do formulário */
             margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
         }
 
-        .bebidas {
-            position: absolute;
-            right: 50%;
-            top: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1vh 0;
-            text-align: center;
+        .bebida2 {
+            display: absolute;
+            justify-content: center;  /* Centraliza o botão dentro do formulário */
+            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+        }
+        .bebida {
+            display: absolute;
+            justify-content: center;  /* Centraliza o botão dentro do formulário */
+            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
         }
  
 }
@@ -189,16 +191,20 @@
 
         /* Ajuste a posição do botão de "festa" aqui */
         .festa {
-            display: flex;
+            display: absolute;
             justify-content: center;  /* Centraliza o botão dentro do formulário */
             margin-top: 2vh;  /* Dá um pequeno espaçamento entre os formulários */
         }
 
+        .bebida2 {
+            display: absolute;
+            justify-content: center;  /* Centraliza o botão dentro do formulário */
+            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+        }
         .bebida {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 45%;
+            display: absolute;
+            justify-content: center;  /* Centraliza o botão dentro do formulário */
+            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
         }
     </style>
 </head>
@@ -218,8 +224,10 @@
         <p> Adicione alguns dados para entrarmos em contato.</p>
 
         <!-- Formulário para enviar os dados -->
-        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="festa">
+        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida">
             <input class="dados" type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
+        </form> 
+        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
             <button type="submit">Menu de bebidas</button>
         </form>
         
