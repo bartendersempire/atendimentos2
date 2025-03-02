@@ -49,9 +49,11 @@
         .bebida2 {
             display: absolute;
             justify-content: center;  /* Centraliza o botão dentro do formulário */
-            margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
+            margin-top: 5vh; /* Dá um pequeno espaçamento entre os formulários */
+            width:4vh;
+            
         }
-        .bebida {
+        .cidade {
             display: absolute;
             justify-content: center;  /* Centraliza o botão dentro do formulário */
             margin-top: 5vh;  /* Dá um pequeno espaçamento entre os formulários */
@@ -61,6 +63,10 @@
 
 
 
+
+
+
+        
 
 
         body {
@@ -224,7 +230,7 @@
         <p> Adicione alguns dados para entrarmos em contato.</p>
 
         <!-- Formulário para enviar os dados -->
-        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida">
+        <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="cidade">
             <input class="dados" type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
         </form> 
         <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
